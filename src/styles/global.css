@@ -59,3 +59,5 @@ h1,h2,h3,p,a,button,label,th,td{overflow-wrap:anywhere}
 
 @media(max-width:680px){.header-inner{gap:8px}.header-inner .brand img{width:120px}.menu-toggle{width:32px;flex-shrink:0}.header-cta{display:inline-flex;align-items:center;gap:10px;flex-shrink:0}.header-cta span{margin-left:0}}
 .filter-panel fieldset{min-width:0;max-width:100%}.filter-panel .check-row{clear:both}
+
+.form-honeypot{display:none}.enquiry-form .button:disabled{opacity:.65;transform:none;cursor:wait}.form-result.is-error{border-left-color:#a33;background:#fff5f4}

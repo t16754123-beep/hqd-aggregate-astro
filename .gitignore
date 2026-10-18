@@ -7,3 +7,4 @@ dist/
 data/source/
 data/source-products.json
 .local-home-check.html
+.wrangler/

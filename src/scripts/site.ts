@@ -34,4 +34,38 @@ function renderShortlist(){if(!shortlist)return;shortlist.replaceChildren();cons
  const comparison=document.querySelector<HTMLElement>('[data-comparison]')!;comparison.replaceChildren();comparison.hidden=selected.length<2;if(selected.length>=2){comparison.append(element('h2','Your selection at a glance.'));const table=document.createElement('table'),thead=document.createElement('thead'),head=document.createElement('tr');head.append(element('th','Model'));selected.forEach(p=>head.append(element('th',p.model)));thead.append(head);table.append(thead);const tbody=document.createElement('tbody');for(const [label,value] of [['Connection',(p:typeof products[number])=>p.interface],['Configuration',(p:typeof products[number])=>p.family],['Outputs',(p:typeof products[number])=>String(p.outputs)],['Tooling',()=>'ER25'],['Machining',(p:typeof products[number])=>p.operations.join(', ')] ] as const){const row=document.createElement('tr'),th=element('th',label);th.setAttribute('scope','row');row.append(th);selected.forEach(p=>row.append(element('td',value(p))));tbody.append(row);}table.append(tbody);comparison.append(table);}}
 renderShortlist();document.querySelector('[data-clear-shortlist]')?.addEventListener('click',()=>{saved=[];store();renderShortlist();});
 const form=document.querySelector<HTMLFormElement>('[data-enquiry-form]');
-if(form){const model=form.querySelector<HTMLInputElement>('[name=product]')!;model.value=new URLSearchParams(location.search).get('product')||'';form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const data=new FormData(form);const subject=`HQD aggregate enquiry — ${data.get('product')||'Product selection'}`;const body=[`Name: ${data.get('name')}`,`Company: ${data.get('company')||''}`,`Email: ${data.get('email')}`,`Phone: ${data.get('phone')||''}`,`Model(s): ${data.get('product')||'Please advise'}`,`Machine / spindle: ${data.get('machine')||''}`,'',String(data.get('message'))].join('\n');const result=form.querySelector<HTMLElement>('[data-form-result]')!;result.hidden=false;result.replaceChildren(element('p','Your enquiry is ready. Open your email app to review and send it to HQD. No message has been sent by this website.'));const a=document.createElement('a');a.href=`mailto:lisa@hqd-spindlemotor.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;a.textContent='OPEN EMAIL DRAFT ↗';result.append(a);result.focus();});}
+if(form){
+ const model=form.querySelector<HTMLInputElement>('[name=product]')!;
+ const selectedModel=new URLSearchParams(location.search).get('product')||'';
+ model.value=selectedModel;
+ const button=form.querySelector<HTMLButtonElement>('[data-submit-button]')!;
+ const label=form.querySelector<HTMLElement>('[data-submit-label]')!;
+ const result=form.querySelector<HTMLElement>('[data-form-result]')!;
+ let submitting=false;
+ form.addEventListener('submit',async event=>{
+  event.preventDefault();
+  if(submitting||!form.reportValidity())return;
+  submitting=true;button.disabled=true;label.textContent='SENDING…';form.setAttribute('aria-busy','true');
+  result.hidden=false;result.classList.remove('is-error');result.replaceChildren(element('p','Sending your enquiry…'));
+  try{
+   const data=new FormData(form);
+   const payload=Object.fromEntries(['name','company','email','phone','product','machine','message','website'].map(name=>[name,String(data.get(name)||'')]));
+   const response=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},credentials:'same-origin',body:JSON.stringify(payload),signal:AbortSignal.timeout(22000)});
+   const delivery=await response.json().catch(()=>null);
+   if(!response.ok||delivery?.ok!==true){
+    const fallback='Online delivery is temporarily unavailable. Please try again or email HQD directly.';
+    const message=typeof delivery?.message==='string'?delivery.message:fallback;
+    throw new Error(message);
+   }
+   result.replaceChildren(element('p','Your enquiry has been submitted. Thank you — HQD will be in touch.'));
+   form.reset();model.value=selectedModel;
+  }catch(error){
+   result.classList.add('is-error');
+   const message=error instanceof Error&&error.name!=='TimeoutError'&&error.name!=='AbortError'?error.message:'The request timed out. Your details are still in the form. Please try again or email HQD directly.';
+   result.replaceChildren(element('p',message));
+   const contact=document.createElement('a');contact.href='mailto:lisa@hqd-spindlemotor.com';contact.textContent='EMAIL HQD DIRECTLY ↗';result.append(contact);
+  }finally{
+   submitting=false;button.disabled=false;label.textContent='SEND ENQUIRY';form.removeAttribute('aria-busy');result.focus();
+  }
+ });
+}
