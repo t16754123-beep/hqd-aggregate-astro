@@ -53,7 +53,7 @@ async function readForm(request) {
   return fields;
 }
 
-export function createEnquiryHandler({ fetcher = fetch, cache: configuredCache } = {}) {
+export function createEnquiryHandler({ fetcher = (...args) => globalThis.fetch(...args), cache: configuredCache } = {}) {
   return async ({ request }) => {
     const cache = configuredCache ?? globalThis.caches?.default;
     let rateKey;
@@ -83,7 +83,7 @@ export function createEnquiryHandler({ fetcher = fetch, cache: configuredCache }
           _subject: `HQD website enquiry — ${fields.product.slice(0, 100) || 'Product selection'}`,
           _template: 'table', _url: `${origin}/contact/`,
         }),
-        redirect: 'error', signal: AbortSignal.timeout(15000),
+        redirect: 'manual', signal: AbortSignal.timeout(15000),
       });
       if (!response.ok) {
         console.warn(`[enquiry] provider_http_${response.status}`);
@@ -104,7 +104,10 @@ export function createEnquiryHandler({ fetcher = fetch, cache: configuredCache }
     } catch (error) {
       if (rateKey && cache) { try { await cache.delete(rateKey); } catch {} }
       const known = error instanceof FormError;
-      if (!known) console.warn(`[enquiry] transport_${['TypeError', 'TimeoutError', 'AbortError'].includes(error?.name) ? error.name : 'Error'}`);
+      if (!known) {
+        const detail = /illegal invocation/i.test(error?.message) ? 'invocation' : /redirect/i.test(error?.message) ? 'redirect' : /timeout is not a function/i.test(error?.message) ? 'timeout_api' : /network|connection|fetch failed/i.test(error?.message) ? 'network' : 'unknown';
+        console.warn(`[enquiry] transport_${['TypeError', 'TimeoutError', 'AbortError'].includes(error?.name) ? error.name : 'Error'}_${detail}`);
+      }
       const status = known ? error.status : 503;
       const code = known ? error.code : 'DELIVERY_UNAVAILABLE';
       if (status >= 500) console.warn(`[enquiry] ${code}`);

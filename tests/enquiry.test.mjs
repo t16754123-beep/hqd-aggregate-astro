@@ -66,7 +66,7 @@ test('activation responses are never reported as a sent enquiry', async () => {
 });
 
 test('provider rejection, invalid output and transport failures never produce false success', async () => {
-  for (const provider of [() => new Response('Unavailable', { status: 503 }), () => new Response('<html>error</html>'), () => Response.json({ success: false }), () => { throw new DOMException('Timed out', 'TimeoutError'); }]) {
+  for (const provider of [() => new Response('Unavailable', { status: 503 }), () => new Response('', { status: 302, headers: { Location: 'https://other.example' } }), () => new Response('<html>error</html>'), () => Response.json({ success: false }), () => { throw new DOMException('Timed out', 'TimeoutError'); }]) {
     const { send } = setup(provider);
     const response = await send(request());
     assert.equal(response.status, 503);
