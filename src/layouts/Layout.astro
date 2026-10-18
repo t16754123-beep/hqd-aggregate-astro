@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+const { title = 'HQD · Precision CNC Aggregates', description = 'Discover HQD CNC aggregates with ISO30 and HSK63F interfaces. Adjustable, dual-output, four-output and saw-mount angle heads.', active = '' } = Astro.props;
+const origin = 'https://hqd-aggregate-precision.t16754123.chatgpt.site';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} /><meta name="theme-color" content="#004892" />
+    <title>{title}</title><link rel="icon" type="image/png" href="/favicon.png" /><link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="canonical" href={origin + Astro.url.pathname} />
+    <meta property="og:title" content={title} /><meta property="og:description" content={description} />
+    <meta property="og:type" content="website" /><meta property="og:url" content={origin + Astro.url.pathname} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="utility"><div class="container"><span>PRECISION IN EVERY DIRECTION.</span><div><a href="mailto:lisa@hqd-spindlemotor.com">lisa@hqd-spindlemotor.com</a><a href="tel:+8613776865267">+86 137 7686 5267</a><span class="language">EN</span></div></div></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="HQD home"><img src="/images/hqd-official-logo.jpg" alt="HQD" width="826" height="285" fetchpriority="high" /></a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-controls="primary-nav" aria-expanded="false"><span></span><span></span></button>
+        <nav id="primary-nav" aria-label="Primary navigation">
+          <a href="/products/" class:list={{ current: active === 'products' }}>Products</a>
+          <a href="/applications/" class:list={{ current: active === 'applications' }}>Applications</a>
+          <a href="/technology/" class:list={{ current: active === 'technology' }}>Technology</a>
+          <a href="/contact/" class:list={{ current: active === 'contact' }}>Contact</a>
+          <a href="/shortlist/" class="shortlist-link" aria-label="View product shortlist">Shortlist <span data-shortlist-count>0</span></a>
+        </nav>
+        <a class="header-cta" href="/contact/">LET’S TALK <span>↗</span></a>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <section class="enquiry-banner"><div class="container"><div><p class="eyebrow">YOUR NEXT MACHINING CHALLENGE</p><h2>Let’s find your angle.</h2></div><a class="button button-white" href="/contact/">TALK TO HQD <span>↗</span></a></div></section>
+    <footer><div class="container footer-top"><a class="brand footer-brand" href="/" aria-label="HQD home"><img src="/images/hqd-official-logo.jpg" alt="HQD" width="826" height="285" loading="lazy" /></a><div><h3>Explore</h3><a href="/products/">Product finder</a><a href="/applications/">Applications</a><a href="/technology/">Aggregate technology</a><a href="/shortlist/">Your shortlist</a></div><div><h3>Get in touch</h3><a href="mailto:lisa@hqd-spindlemotor.com">lisa@hqd-spindlemotor.com</a><a href="tel:+8613776865267">+86 137 7686 5267</a><a href="/contact/">Technical enquiry ↗</a></div><div><h3>HQD Spindle Motor</h3><p>Zhenxi Industry Zone, Henglin Town<br />Changzhou, Jiangsu, China</p></div></div><div class="container footer-bottom"><span>© {new Date().getFullYear()} HQD Spindle Motor. All rights reserved.</span><span>ISO30 / HSK63F · ER25</span><a href="/privacy/">Privacy</a></div></footer>
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+    <script src="../scripts/site.ts"></script>
+  </body>
+</html>

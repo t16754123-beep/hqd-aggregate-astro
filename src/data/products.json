@@ -1,0 +1,672 @@
+[
+  {
+    "id": "ad-iso30-er25",
+    "slug": "ad-iso30-er25",
+    "model": "AD-ISO30-ER25",
+    "name": "Adjustable angle head",
+    "interface": "ISO30",
+    "family": "Adjustable",
+    "outputs": 1,
+    "operations": [
+      "Drilling",
+      "Sawing"
+    ],
+    "summary": "Orient an ER25 tool to the required machining angle with a compact ISO30 aggregate. Drilling and saw configurations support angled access without rebuilding the machine.",
+    "paragraphs": [
+      "The AD-ISO30-ER25 couples to a ISO30 spindle and provides an adjustable output axis for access to inclined faces and side features.",
+      "Set the required angle with the machine stopped, then secure the locking components before operation. Match the tool, speed and clearance to the intended drilling or sawing configuration."
+    ],
+    "features": [
+      "Adjustable output orientation",
+      "ER25 tool interface",
+      "Grease-lubricated transmission"
+    ],
+    "specs": [
+      {
+        "label": "Input interface",
+        "value": "ISO30"
+      },
+      {
+        "label": "Tool holder",
+        "value": "ER25"
+      },
+      {
+        "label": "Maximum drilling input / output speed",
+        "value": "12,000 / 12,000 rpm"
+      },
+      {
+        "label": "Maximum sawing input / output speed",
+        "value": "7,000 / 7,000 rpm"
+      },
+      {
+        "label": "Angular adjustment range",
+        "value": "95°"
+      },
+      {
+        "label": "Maximum drill shank diameter",
+        "value": "Ø16 mm"
+      },
+      {
+        "label": "Maximum saw blade diameter",
+        "value": "Ø180 mm"
+      },
+      {
+        "label": "Lubrication",
+        "value": "Grease"
+      }
+    ],
+    "image": "/images/ad-iso30-er25-0.webp",
+    "gallery": [
+      "/images/ad-iso30-er25-0.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/adjustable-angle-headiso30-er25/",
+    "sourceTitle": "Adjustable angle head(ISO30-ER25)",
+    "dataNotes": [
+      "Specifications supplied by the project owner; the linked HQD detail page was unavailable during collection."
+    ],
+    "sourceType": "project-owner"
+  },
+  {
+    "id": "ad-hsk63f-er25",
+    "slug": "ad-hsk63f-er25",
+    "model": "AD-HSK63F-ER25",
+    "name": "Adjustable angle head",
+    "interface": "HSK63F",
+    "family": "Adjustable",
+    "outputs": 1,
+    "operations": [
+      "Drilling",
+      "Sawing"
+    ],
+    "summary": "Orient an ER25 tool to the required machining angle with a compact HSK63F aggregate. Drilling and saw configurations support angled access without rebuilding the machine.",
+    "paragraphs": [
+      "The AD-HSK63F-ER25 couples to a HSK63F spindle and provides an adjustable output axis for access to inclined faces and side features.",
+      "Set the required angle with the machine stopped, then secure the locking components before operation. Match the tool, speed and clearance to the intended drilling or sawing configuration."
+    ],
+    "features": [
+      "Adjustable output orientation",
+      "ER25 tool interface",
+      "Grease-lubricated transmission"
+    ],
+    "specs": [
+      {
+        "label": "Electrospindle rotation speed",
+        "value": "Drilling: 12,000 rpm · Sawing: 7,000 rpm (maximum)"
+      },
+      {
+        "label": "Tool rotation speed",
+        "value": "Drilling: 12,000 rpm · Sawing: 7,000 rpm (maximum)"
+      },
+      {
+        "label": "Speed ratio",
+        "value": "1:1"
+      },
+      {
+        "label": "Electrospindle coupling",
+        "value": "HSK63F"
+      },
+      {
+        "label": "Tool shank diameter",
+        "value": "Ø1-Ø16mm"
+      },
+      {
+        "label": "Max bit diameter(*)",
+        "value": "Ø16mm"
+      },
+      {
+        "label": "Blade diameter(°)",
+        "value": "Ø180mm(Max value)"
+      },
+      {
+        "label": "Lubrication",
+        "value": "Grease"
+      }
+    ],
+    "image": "/images/ad-hsk63f-er25-0.webp",
+    "gallery": [
+      "/images/ad-hsk63f-er25-0.webp",
+      "/images/ad-hsk63f-er25-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/angle-head-hsk63f-er25x2%ef%bc%88with-a-saw-on-one-side%ef%bc%89spindle-motor-2/",
+    "sourceTitle": "HQD HSK63F Adjustable Angle Head with ER25 Collet AD-HSK63F-ER25",
+    "dataNotes": [
+      "The live product title identifies an adjustable HSK63F head; older indexed versions of this URL described a different dual-output model. The live title and specification table were used."
+    ],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "hsk63f-er25-duo",
+    "slug": "hsk63f-er25-duo",
+    "model": "HSK63F-ER25×2",
+    "name": "Dual-output angle head",
+    "interface": "HSK63F",
+    "family": "Dual output",
+    "outputs": 2,
+    "operations": [
+      "Drilling",
+      "Milling"
+    ],
+    "summary": "Two ER25 output positions extend the working envelope of a HSK63F spindle. A 1:1.43 transmission supports up to 12,000 rpm at the output.",
+    "paragraphs": [
+      "The HSK63F-ER25×2 offers two tool positions from one HSK63F input, reducing the need to reposition the workpiece between accessible faces.",
+      "The stated input speed is 8,400 rpm and the maximum output is 12,000 rpm. The head uses grease lubrication and a compact housing for installation where clearance is limited."
+    ],
+    "features": [
+      "Two ER25 output positions",
+      "Speed-increasing gear transmission",
+      "Compact grease-lubricated body"
+    ],
+    "specs": [
+      {
+        "label": "Maximum input speed",
+        "value": "8400rpm"
+      },
+      {
+        "label": "Maximum output speed",
+        "value": "12000rpm"
+      },
+      {
+        "label": "Transmission ratio",
+        "value": "1：1.43"
+      },
+      {
+        "label": "Input terminal",
+        "value": "HSK63F"
+      },
+      {
+        "label": "Output terminal",
+        "value": "ER25"
+      },
+      {
+        "label": "Luburication",
+        "value": "Grease"
+      }
+    ],
+    "image": "/images/hsk63f-er25-duo-0.webp",
+    "gallery": [
+      "/images/hsk63f-er25-duo-0.webp",
+      "/images/hsk63f-er25-duo-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/hqd-manufacturer-aggregates-angle-head-hsk63f-er25x2-for-919-and-929-series-spindle-motor/",
+    "sourceTitle": "HQD HSK63F Dual-Output Angle Head with ER25 Collets HSK63F-ER25×2",
+    "dataNotes": [],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "hsk63f-er25-duo-saw",
+    "slug": "hsk63f-er25-duo-saw",
+    "model": "HSK63F-ER25×2-S",
+    "name": "Dual-output head with saw mount",
+    "interface": "HSK63F",
+    "family": "Sawing",
+    "outputs": 2,
+    "operations": [
+      "Drilling",
+      "Milling",
+      "Sawing"
+    ],
+    "summary": "Combine ER25 tooling and a saw-mount option in a HSK63F aggregate. Select the active machining configuration to suit drilling, milling or cutting access.",
+    "paragraphs": [
+      "The HSK63F-ER25×2-S connects to a HSK63F spindle and provides an ER25 tool interface with a saw-blade mounting option.",
+      "Use the speed limits assigned to the installed tool configuration. Confirm the mounting arrangement, machine clearance and permitted operating sequence with the application team."
+    ],
+    "features": [
+      "ER25 tooling with saw-mount option",
+      "HSK63F spindle interface",
+      "Separate drilling and sawing speed limits"
+    ],
+    "specs": [
+      {
+        "label": "Input maximum speed",
+        "value": "8400rpm (The maximum speed when using the saw blade is 4200 rpm)"
+      },
+      {
+        "label": "Output maximum speed",
+        "value": "12000rpm (The maximum speed when using the saw blade is 6000 rpm)"
+      },
+      {
+        "label": "Transmission ratio",
+        "value": "1：1.43"
+      },
+      {
+        "label": "Tool Holder",
+        "value": "HSK63F"
+      },
+      {
+        "label": "Output shaft",
+        "value": "ER25，One side can be fitted with a saw blade"
+      },
+      {
+        "label": "Lubricating method",
+        "value": "Grease lubrication"
+      }
+    ],
+    "image": "/images/hsk63f-er25-duo-saw-0.webp",
+    "gallery": [
+      "/images/hsk63f-er25-duo-saw-0.webp",
+      "/images/hsk63f-er25-duo-saw-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/angle-head-hsk63f-er25x2%ef%bc%88with-a-saw-on-one-side%ef%bc%89spindle-motor/",
+    "sourceTitle": "HQD HSK63F Dual-Output ER25 Angle Head with Saw Blade Mount HSK63F-ER25×2-S",
+    "dataNotes": [],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "hsk63f-er25-saw",
+    "slug": "hsk63f-er25-saw",
+    "model": "HSK63F-ER25-S",
+    "name": "Angle head with saw mount",
+    "interface": "HSK63F",
+    "family": "Sawing",
+    "outputs": 1,
+    "operations": [
+      "Drilling",
+      "Sawing"
+    ],
+    "summary": "Combine ER25 tooling and a saw-mount option in a HSK63F aggregate. Select the active machining configuration to suit drilling, milling or cutting access.",
+    "paragraphs": [
+      "The HSK63F-ER25-S connects to a HSK63F spindle and provides an ER25 tool interface with a saw-blade mounting option.",
+      "Use the speed limits assigned to the installed tool configuration. Confirm the mounting arrangement, machine clearance and permitted operating sequence with the application team."
+    ],
+    "features": [
+      "ER25 tooling with saw-mount option",
+      "HSK63F spindle interface",
+      "Separate drilling and sawing speed limits"
+    ],
+    "specs": [
+      {
+        "label": "Input maximum speed",
+        "value": "8400rpm (The maximum speed when using the saw blade is 4200 rpm)"
+      },
+      {
+        "label": "Output maximum speed",
+        "value": "12000rpm (The maximum speed when using the saw blade is 6000 rpm)"
+      },
+      {
+        "label": "Transmission ratio",
+        "value": "1：1.43"
+      },
+      {
+        "label": "Tool Holder",
+        "value": "HSK63F"
+      },
+      {
+        "label": "Output shaft",
+        "value": "ER25，One side can be fitted with a saw blade"
+      },
+      {
+        "label": "Lubricating method",
+        "value": "Grease lubrication"
+      }
+    ],
+    "image": "/images/hsk63f-er25-saw-0.webp",
+    "gallery": [
+      "/images/hsk63f-er25-saw-0.webp",
+      "/images/hsk63f-er25-saw-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/hqd-manufacturer-aggregates-angle-head-hsk63f-er25-saw-blade-for-919-and-929-series-spindle-motor/",
+    "sourceTitle": "HQD HSK63F ER25 Angle Head with Saw Blade Mount HSK63F-ER25-S",
+    "dataNotes": [],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "hsk63f-er25-quattro",
+    "slug": "hsk63f-er25-quattro",
+    "model": "HSK63F-ER25×4",
+    "name": "Four-output angle head",
+    "interface": "HSK63F",
+    "family": "Four output",
+    "outputs": 4,
+    "operations": [
+      "Drilling",
+      "Milling"
+    ],
+    "summary": "Four ER25 outputs combine multiple tool positions in one HSK63F aggregate. The speed-increasing transmission reaches a stated 12,000 rpm output from 8,400 rpm input.",
+    "paragraphs": [
+      "The HSK63F-ER25×4 brings four ER25 tool positions together in a compact HSK63F head for multi-face work.",
+      "Its shared input drives the output shafts through a 1:1.43 transmission. A compact body and grease lubrication simplify integration and routine maintenance."
+    ],
+    "features": [
+      "Four ER25 output positions",
+      "8,400 rpm maximum input",
+      "12,000 rpm maximum output"
+    ],
+    "specs": [
+      {
+        "label": "Maximum input speed",
+        "value": "8400rpm"
+      },
+      {
+        "label": "Maximum output speed",
+        "value": "12000rpm"
+      },
+      {
+        "label": "Transmission ratio",
+        "value": "1：1.43"
+      },
+      {
+        "label": "Input terminal",
+        "value": "HSK63F"
+      },
+      {
+        "label": "Output terminal",
+        "value": "ER25"
+      },
+      {
+        "label": "Luburication",
+        "value": "Grease"
+      }
+    ],
+    "image": "/images/hsk63f-er25-quattro-0.webp",
+    "gallery": [
+      "/images/hsk63f-er25-quattro-0.webp",
+      "/images/hsk63f-er25-quattro-1.webp",
+      "/images/hsk63f-er25-quattro-2.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/hqd-manufacturer-aggregates-angle-head-hsk63f-er25x4-for-919-and-929-series-spindle-motor/",
+    "sourceTitle": "HQD HSK63F Four-Output Angle Head with ER25 Collets HSK63F-ER25×4",
+    "dataNotes": [],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "iso30-er25-duo",
+    "slug": "iso30-er25-duo",
+    "model": "ISO30-ER25×2",
+    "name": "Dual-output angle head",
+    "interface": "ISO30",
+    "family": "Dual output",
+    "outputs": 2,
+    "operations": [
+      "Drilling",
+      "Milling"
+    ],
+    "summary": "Two ER25 output positions extend the working envelope of a ISO30 spindle. A 1:1.43 transmission supports up to 12,000 rpm at the output.",
+    "paragraphs": [
+      "The ISO30-ER25×2 offers two tool positions from one ISO30 input, reducing the need to reposition the workpiece between accessible faces.",
+      "The stated input speed is 8,400 rpm and the maximum output is 12,000 rpm. The head uses grease lubrication and a compact housing for installation where clearance is limited."
+    ],
+    "features": [
+      "Two ER25 output positions",
+      "Speed-increasing gear transmission",
+      "Compact grease-lubricated body"
+    ],
+    "specs": [
+      {
+        "label": "Maximum input speed",
+        "value": "8400rpm"
+      },
+      {
+        "label": "Maximum output speed",
+        "value": "12000rpm"
+      },
+      {
+        "label": "Transmission ratio",
+        "value": "1：1.43"
+      },
+      {
+        "label": "Input terminal",
+        "value": "ISO30"
+      },
+      {
+        "label": "Output terminal",
+        "value": "ER25"
+      },
+      {
+        "label": "Luburication",
+        "value": "Grease"
+      }
+    ],
+    "image": "/images/iso30-er25-duo-0.webp",
+    "gallery": [
+      "/images/iso30-er25-duo-0.webp",
+      "/images/iso30-er25-duo-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/hqd-manufacturer-aggregates-angle-head-iso30-er25x2-for919-and-929-series-spindle-motor/",
+    "sourceTitle": "HQD ISO30 Dual-Output Angle Head with ER25 Collets ISO30-ER25×2",
+    "dataNotes": [],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "iso30-er25-duo-saw",
+    "slug": "iso30-er25-duo-saw",
+    "model": "ISO30-ER25×2-S",
+    "name": "Dual-output head with saw mount",
+    "interface": "ISO30",
+    "family": "Sawing",
+    "outputs": 2,
+    "operations": [
+      "Drilling",
+      "Milling",
+      "Sawing"
+    ],
+    "summary": "Combine ER25 tooling and a saw-mount option in a ISO30 aggregate. Select the active machining configuration to suit drilling, milling or cutting access.",
+    "paragraphs": [
+      "The ISO30-ER25×2-S connects to a ISO30 spindle and provides an ER25 tool interface with a saw-blade mounting option.",
+      "Use the speed limits assigned to the installed tool configuration. Confirm the mounting arrangement, machine clearance and permitted operating sequence with the application team."
+    ],
+    "features": [
+      "ER25 tooling with saw-mount option",
+      "ISO30 spindle interface",
+      "Separate drilling and sawing speed limits"
+    ],
+    "specs": [
+      {
+        "label": "Input interface",
+        "value": "ISO30"
+      },
+      {
+        "label": "Output configuration",
+        "value": "ER25 and single-side saw mount"
+      },
+      {
+        "label": "Maximum output speed",
+        "value": "12,000 rpm"
+      },
+      {
+        "label": "Transmission ratio",
+        "value": "1:1.43"
+      },
+      {
+        "label": "Taper runout",
+        "value": "<0.005 mm"
+      },
+      {
+        "label": "Maximum saw speed stated in source FAQ",
+        "value": "4,200 rpm"
+      },
+      {
+        "label": "Lubrication",
+        "value": "Grease"
+      }
+    ],
+    "image": "/images/iso30-er25-duo-saw-0.webp",
+    "gallery": [
+      "/images/iso30-er25-duo-saw-0.webp",
+      "/images/iso30-er25-duo-saw-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/hqd-angle-head-iso30-er25x2%ef%bc%88with-a-saw-on-one-side%ef%bc%89spindle-motor/",
+    "sourceTitle": "HQD ISO30 Dual-Output ER25 Angle Head with Saw Blade Mount ISO30-ER25×2-S",
+    "dataNotes": [
+      "The source FAQ lists a 4,200 rpm saw limit. Verify the input/output limit and approved saw configuration with HQD before ordering."
+    ],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "iso30-er25-saw",
+    "slug": "iso30-er25-saw",
+    "model": "ISO30-ER25-S",
+    "name": "Angle head with saw mount",
+    "interface": "ISO30",
+    "family": "Sawing",
+    "outputs": 1,
+    "operations": [
+      "Drilling",
+      "Sawing"
+    ],
+    "summary": "Combine ER25 tooling and a saw-mount option in a ISO30 aggregate. Select the active machining configuration to suit drilling, milling or cutting access.",
+    "paragraphs": [
+      "The ISO30-ER25-S connects to a ISO30 spindle and provides an ER25 tool interface with a saw-blade mounting option.",
+      "Use the speed limits assigned to the installed tool configuration. Confirm the mounting arrangement, machine clearance and permitted operating sequence with the application team."
+    ],
+    "features": [
+      "ER25 tooling with saw-mount option",
+      "ISO30 spindle interface",
+      "Separate drilling and sawing speed limits"
+    ],
+    "specs": [
+      {
+        "label": "Input maximum speed",
+        "value": "8400rpm (The maximum speed when using the saw blade is 4200 rpm)"
+      },
+      {
+        "label": "Output maximum speed",
+        "value": "12000rpm (The maximum speed when using the saw blade is 6000 rpm)"
+      },
+      {
+        "label": "Tool Holder",
+        "value": "ISO30"
+      },
+      {
+        "label": "Output shaft",
+        "value": "ER25，Saw blades can be installed"
+      },
+      {
+        "label": "Lubricating method",
+        "value": "Grease lubrication"
+      }
+    ],
+    "image": "/images/iso30-er25-saw-0.webp",
+    "gallery": [
+      "/images/iso30-er25-saw-0.webp",
+      "/images/iso30-er25-saw-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/hqd-manufacturer-aggregates-angle-head-iso30-er25-saw-blade-for-919-and-929-series-spindle-motor/",
+    "sourceTitle": "HQD ISO30 ER25 Angle Head with Saw Blade Mount ISO30-ER25-S",
+    "dataNotes": [],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "iso30-er25-45",
+    "slug": "iso30-er25-45",
+    "model": "ISO30-ER25-S-45°",
+    "name": "Fixed 45° angle head",
+    "interface": "ISO30",
+    "family": "Fixed angle",
+    "outputs": 1,
+    "operations": [
+      "Drilling",
+      "Sawing"
+    ],
+    "summary": "A fixed 45° output brings angled drilling and sawing to an ISO30 spindle. The ER25 interface and saw mount cover complementary machining tasks.",
+    "paragraphs": [
+      "A dedicated 45° geometry provides consistent access to inclined features without resetting the angle between parts.",
+      "The published table specifies a 1:1 ratio, ER25 tooling, a maximum Ø16 mm bit and a maximum Ø180 mm saw blade. Drilling and sawing have different speed limits."
+    ],
+    "features": [
+      "Fixed 45° machining orientation",
+      "ER25 and saw mounting options",
+      "1:1 transmission ratio"
+    ],
+    "specs": [
+      {
+        "label": "Electrospindle rotation speed",
+        "value": "Drilling: 12,000 rpm · Sawing: 7,000 rpm (maximum)"
+      },
+      {
+        "label": "Tool rotation speed",
+        "value": "Drilling: 12,000 rpm · Sawing: 7,000 rpm (maximum)"
+      },
+      {
+        "label": "Speed ratio",
+        "value": "1:1"
+      },
+      {
+        "label": "Electrospindle coupling",
+        "value": "ISO30"
+      },
+      {
+        "label": "Tool shank diameter",
+        "value": "Ø1-Ø16mm"
+      },
+      {
+        "label": "Max bit diameter(*)",
+        "value": "Ø16mm"
+      },
+      {
+        "label": "Blade diameter(°)",
+        "value": "Ø180mm(Max value)"
+      },
+      {
+        "label": "Lubrication",
+        "value": "Grease"
+      }
+    ],
+    "image": "/images/iso30-er25-45-0.webp",
+    "gallery": [
+      "/images/iso30-er25-45-0.webp",
+      "/images/iso30-er25-45-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/hqd-manufacturer-adjustable-aggregates-angle-head-iso30-er25-for-919-and-929-series-spindle-motor/",
+    "sourceTitle": "HQD ISO30 Fixed 45° Angle Head with ER25 Collet and Saw Blade Mount ISO30-ER25-S-45°",
+    "dataNotes": [],
+    "sourceType": "HQD product page"
+  },
+  {
+    "id": "iso30-er25-quattro",
+    "slug": "iso30-er25-quattro",
+    "model": "ISO30-ER25×4",
+    "name": "Four-output angle head",
+    "interface": "ISO30",
+    "family": "Four output",
+    "outputs": 4,
+    "operations": [
+      "Drilling",
+      "Milling"
+    ],
+    "summary": "Four ER25 outputs combine multiple tool positions in one ISO30 aggregate. The speed-increasing transmission reaches a stated 12,000 rpm output from 8,400 rpm input.",
+    "paragraphs": [
+      "The ISO30-ER25×4 brings four ER25 tool positions together in a compact ISO30 head for multi-face work.",
+      "Its shared input drives the output shafts through a 1:1.43 transmission. A compact body and grease lubrication simplify integration and routine maintenance."
+    ],
+    "features": [
+      "Four ER25 output positions",
+      "8,400 rpm maximum input",
+      "12,000 rpm maximum output"
+    ],
+    "specs": [
+      {
+        "label": "Maximum input speed",
+        "value": "8400rpm"
+      },
+      {
+        "label": "Maximum output speed",
+        "value": "12000rpm"
+      },
+      {
+        "label": "Transmission ratio",
+        "value": "1：1.43"
+      },
+      {
+        "label": "Input terminal",
+        "value": "ISO30"
+      },
+      {
+        "label": "Output terminal",
+        "value": "ER25"
+      },
+      {
+        "label": "Luburication",
+        "value": "Grease"
+      }
+    ],
+    "image": "/images/iso30-er25-quattro-0.webp",
+    "gallery": [
+      "/images/iso30-er25-quattro-0.webp",
+      "/images/iso30-er25-quattro-1.webp"
+    ],
+    "sourceUrl": "https://hqd-spindlemotor.com/product/hqd-manufacturer-angle-head-aggregates-4-sides-er25-iso30-for-919-and-929-series-spindle-motor-iso30-er25x4/",
+    "sourceTitle": "HQD ISO30 Four-Output Angle Head with ER25 Collets ISO30-ER25×4",
+    "dataNotes": [],
+    "sourceType": "HQD product page"
+  }
+]

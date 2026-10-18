@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.local/
+.env*
+!.env.example
+data/source/
+data/source-products.json
+.local-home-check.html

@@ -1,0 +1,17 @@
+{
+  "logo": {
+    "file": "/images/hqd-official-logo.jpg",
+    "source": "https://hqd-spindlemotor.com/wp-content/uploads/2025/05/logo-1-1.jpg",
+    "width": 826,
+    "height": 285,
+    "usage": "Unmodified official HQD logo; favicon resized and padded from the same asset."
+  },
+  "theme": {
+    "primary": "#004892",
+    "source": "https://hqd-spindlemotor.com/",
+    "evidence": "Homepage Elementor CSS: header button element 6d3d300; footer background and button elements 83bcb2 and 916a51d.",
+    "hover": "#00366e",
+    "hover_note": "Derived darker shade for accessible interactive states."
+  },
+  "verified": "2026-10-18"
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "file": "barlow-condensed.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/barlowcondensed/BarlowCondensed-SemiBold.ttf"
+  },
+  {
+    "file": "open-sans.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/opensans/OpenSans%5Bwdth,wght%5D.ttf"
+  }
+]
