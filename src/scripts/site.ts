@@ -1,3 +1,4 @@
+import { submitEnquiry } from '../lib/enquiry.mjs';
 import products from '../data/products.json';
 const key='hqd-aggregate-shortlist-v1';
 const known=new Set(products.map(p=>p.id));
@@ -49,14 +50,9 @@ if(form){
   result.hidden=false;result.classList.remove('is-error');result.replaceChildren(element('p','Sending your enquiry…'));
   try{
    const data=new FormData(form);
-   const payload=Object.fromEntries(['name','company','email','phone','product','machine','message','website'].map(name=>[name,String(data.get(name)||'')]));
-   const response=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},credentials:'same-origin',body:JSON.stringify(payload),signal:AbortSignal.timeout(22000)});
-   const delivery=await response.json().catch(()=>null);
-   if(!response.ok||delivery?.ok!==true){
-    const fallback='Online delivery is temporarily unavailable. Please try again or email HQD directly.';
-    const message=typeof delivery?.message==='string'?delivery.message:fallback;
-    throw new Error(message);
-   }
+   const payload=Object.fromEntries(['name','company','email','phone','product','machine','message'].map(name=>[name,String(data.get(name)||'')]));
+   payload.website=String(data.get('_honey')||'');
+   await submitEnquiry(payload,{siteUrl:form.dataset.enquirySite});
    result.replaceChildren(element('p','Your enquiry has been submitted. Thank you — HQD will be in touch.'));
    form.reset();model.value=selectedModel;
   }catch(error){

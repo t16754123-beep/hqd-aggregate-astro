@@ -30,13 +30,13 @@ HQD supplies the official logo and blue (`#004892`) brand palette. ATEMAG suppli
 
 ## Enquiries and privacy
 
-Cloudflare Pages Functions handles `POST /api/enquiry` through `functions/api/enquiry.js` and `server/enquiry.mjs`. Valid submissions are sent through FormSubmit to the fixed recipient `lisa@hqd-spindlemotor.com`; customer addresses are used only as Reply-To. No SMTP/API secrets are required or embedded in the frontend.
+The browser sends enquiries to FormSubmit's documented AJAX endpoint for `lisa@hqd-spindlemotor.com`, using `src/lib/enquiry.mjs`. The form also supports a native FormSubmit POST without JavaScript. Customer addresses are used as Reply-To. No SMTP/API secrets are required or embedded in the frontend. Cloudflare Pages hosts the static site and does not relay or store enquiry bodies.
 
 **First-use activation:** FormSubmit sends an activation email to the recipient mailbox when this website's form is first submitted. The mailbox owner must click its activation link. Provider activation responses return an error rather than a false success. A provider acceptance response confirms submission, not inbox delivery; verify an actual test email with the mailbox owner before calling the service fully active.
 
-Requests have same-origin checks, body/field limits, a honeypot, and best-effort per-IP throttling using the Cloudflare Cache API (one submission per minute at the serving data center; not a global atomic rate limiter). Provider failures preserve form inputs and offer direct email as a fallback. No autoresponder is enabled. The server does not log enquiry content or save enquiries in a database. FormSubmit documents a 30-day submission archive. The privacy page explains third-party processing.
+The browser validates field lengths and email format, allowlists outgoing fields, and includes FormSubmit's honeypot. FormSubmit controls server-side abuse protection and rate limits; browser validation is not a security boundary. No CAPTCHA or provider security control is disabled. Provider failures preserve form inputs and offer direct email as a fallback. No autoresponder is enabled. The website has no enquiry database or application logs. FormSubmit documents a 30-day submission archive. The privacy page explains third-party processing.
 
-`pnpm test` mocks the mail provider and never sends real messages. `astro dev` serves only the frontend; to run Pages Functions locally, build and run `wrangler pages dev dist`. Do not submit real recipient data during automated browser QA. Production Pages continues to use `npm run build` and `dist`.
+`pnpm test` mocks the mail provider and never sends real messages. Do not submit the live form during automated browser QA unless a real test email is explicitly authorized. Production Pages uses `npm run build` and `dist`. The earlier Pages Function relay was removed after production tests showed upstream HTTP 429 responses from the shared server connection; the current browser submission follows FormSubmit's official AJAX integration.
 
 Shortlist data stays in browser local storage. No advertising analytics or third-party font requests are added.
 
