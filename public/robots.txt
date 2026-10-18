@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://hqd-aggregate-precision.t16754123.chatgpt.site/sitemap.xml
