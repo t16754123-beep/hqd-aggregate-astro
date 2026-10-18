@@ -75,7 +75,7 @@ export function createEnquiryHandler({ fetcher = fetch, cache: configuredCache }
       }
       const response = await fetcher(`https://formsubmit.co/ajax/${RECIPIENT}`, {
         method: 'POST',
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json', Referer: `${origin}/contact/` },
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json', Referer: `${origin}/contact/`, Origin: origin, 'User-Agent': 'HQD-Website-Enquiry/1.0' },
         body: JSON.stringify({
           name: fields.name, company: fields.company, email: fields.email, phone: fields.phone,
           'Product models': fields.product || 'Please recommend a model', 'Machine / spindle': fields.machine,
@@ -85,16 +85,26 @@ export function createEnquiryHandler({ fetcher = fetch, cache: configuredCache }
         }),
         redirect: 'error', signal: AbortSignal.timeout(15000),
       });
-      if (!response.ok) throw new FormError(503, 'DELIVERY_UNAVAILABLE', UNAVAILABLE);
+      if (!response.ok) {
+        console.warn(`[enquiry] provider_http_${response.status}`);
+        throw new FormError(503, 'DELIVERY_UNAVAILABLE', UNAVAILABLE);
+      }
       let delivery;
-      try { delivery = await response.json(); } catch { throw new FormError(503, 'DELIVERY_UNAVAILABLE', UNAVAILABLE); }
+      try { delivery = await response.json(); } catch {
+        console.warn('[enquiry] provider_invalid_json');
+        throw new FormError(503, 'DELIVERY_UNAVAILABLE', UNAVAILABLE);
+      }
       const providerMessage = typeof delivery?.message === 'string' ? delivery.message : '';
       if (/activat|confirm.{0,25}(?:email|form)|verif.{0,25}(?:email|form)/i.test(providerMessage)) throw new FormError(503, 'ACTIVATION_REQUIRED', UNAVAILABLE);
-      if (delivery?.success !== true && delivery?.success !== 'true') throw new FormError(503, 'DELIVERY_UNAVAILABLE', UNAVAILABLE);
+      if (delivery?.success !== true && delivery?.success !== 'true') {
+        console.warn('[enquiry] provider_rejected');
+        throw new FormError(503, 'DELIVERY_UNAVAILABLE', UNAVAILABLE);
+      }
       return reply(request, 200, 'ACCEPTED', SUCCESS);
     } catch (error) {
       if (rateKey && cache) { try { await cache.delete(rateKey); } catch {} }
       const known = error instanceof FormError;
+      if (!known) console.warn(`[enquiry] transport_${['TypeError', 'TimeoutError', 'AbortError'].includes(error?.name) ? error.name : 'Error'}`);
       const status = known ? error.status : 503;
       const code = known ? error.code : 'DELIVERY_UNAVAILABLE';
       if (status >= 500) console.warn(`[enquiry] ${code}`);
