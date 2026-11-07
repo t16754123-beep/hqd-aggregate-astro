@@ -7,6 +7,9 @@ const origin = Astro.site!.origin;
 <html lang="en">
   <head>
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    {origin === 'https://hqd-spindlemotor.pages.dev' && Astro.url.pathname === '/' && (
+      <meta name="google-site-verification" content="HN8T8jfbvHaviPWP_fbAPsXm4wJ96LExLDoD_0dr0dg" />
+    )}
     <meta name="description" content={description} /><meta name="theme-color" content="#004892" />
     <title>{title}</title><link rel="icon" type="image/png" href="/favicon.png" /><link rel="stylesheet" href="/fonts/fonts.css" />
     <link rel="canonical" href={origin + Astro.url.pathname} />
